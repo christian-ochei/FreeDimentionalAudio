@@ -13,7 +13,7 @@
 In order to use this framework you have to first install its dependencies
 And doing that is as simple as running this in your command line
 
-```bash
+```
 pip install requirements.txt
 ```
 
