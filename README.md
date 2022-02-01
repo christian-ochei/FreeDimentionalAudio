@@ -37,57 +37,65 @@ python demo.py
 and enjoy …
 
 
+#
+
+<br>
 
 
-This Pipeline in a Nutshell
+## This Pipeline in a Nutshell
 
-A Small introduction video to the pipeline.  [Main Thread]
+### 1. A Small introduction video to the pipeline.  [Main Thread]
 
 Demo stems and stemsparser.py is included in the stems directory
 
-I made the parser.py to automatically localize sound sources and animate them for a more amazing experience.
+I made the parser.py to automatically localize sound sources and animate them for a 
+more amazing experience.
 
-Just make sure the filename of each stems suffix is one of 
-[Vocals, Drums, Snares, Ambient, Mono, Hats, Crashes]. 
-An Example will be entrance_downsweepCrasheswav
+Just make sure the filename of each stems suffix is one of [Vocals, Drums, Snares, Ambient, Mono, Hats, Crashes]
 
+An Example will be 
+```
+entrance_downsweepCrashes.wav
+```
 
-A Highly efficient and Differentiable Spatial Audio Propagation Module [Thread 1]
+### 2. A Highly efficient and Differentiable Spatial Audio Propagation Module [Thread 1]
 
 I quickly Discovered direct ray tracing is not the most suitable solution to spatial audio propagation. This is due to rays not being able to account for directional waves and acoustic impedance. Instead of casting rays as lines. I decided to cast triangulated planes from which local sound intensity and total attenuation can be determined by a cubic interpolation of nearest areas. Read my paper for more information.
 
 After computing a sound propagation template PropergationShere( … ) will be truncated. This holds information about how each sound source should change with respect to a sphere around the head.
 
-Spherical Head Related Transfer function. [Thread 2]
+
+### 3. Spherical Head Related Transfer function. [Thread 2]
 
 Because the source sound differs from ear angles, the propagation sphere has to be attenuated with respect to the HRTF sphere.
 
+```python
 SpatialDescriptor( … ) = PropergationShere( … ) - HRTFSphere( … )
+```
 
 A Personalized Head Related Transfer function is very important for realistic spatial audio. Make sure you run the headcallibration.py file to get everything set up. Read more in the headcalibration folder
 
 
-Realtime Audio Player [Thread 3]
+### 4. Realtime Audio Player [Thread 3]
 
 This is one of the most crucial parts of this pipeline. It has to be fast, Robust to lags, It has to have almost zero latency, Thus it is the fastest thread.
 
 
-Real Time Face Tracker  [Thread 4]
+### 5. Real Time Face Tracker  [Thread 4]
 
 For a truly immersive experience. FreeDimentionalAudio Requires known facial intrinsic and extrinsic parameters computed in real time. The easiest and least expensive method I could think of was a face tracker. To realize such idea, I took advantage of MediaPipe Face tracker which is crucial to this pipeline
 	
-	Make sure to pip install mediapipe
+Make sure to ```pip install mediapipe```
 
 
-Realtime - Visualizer  [Main Thread]
+### Realtime - Visualizer  [Main Thread]
 
-	I also built a small visualizer to see how sound and your face moves in real time
+I also built a small visualizer to display how sound and your face moves in real time
+
+#
 
 
-
-
-
-Copyright
+### Copyright
 
 Although you are allowed to download and run code from this repository. You are not allowed in any way to redistribute it, copy code, images or any audio file that you have gotten from this repository.
 
@@ -101,14 +109,14 @@ As for sharing, You are totally allowed to release videos, media posts and rende
 This copyright law will be amended later in the future.
 
 
-Contributing to FreeDimentionalAudio
+### Contributing to FreeDimentionalAudio
 
 I am highly in need of contributors please follow this link if you want to contribute
 …
 
 
 
-License
+### License
 
 … … Licence
 
