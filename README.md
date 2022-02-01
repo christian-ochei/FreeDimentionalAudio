@@ -1,3 +1,5 @@
+<br>
+
 # FreeDimentionalAudio
 
  I present FreeDimentionalAudio A framework that enables novel 3D binaural audio synthesis. This work showcases my new RayTracing approach to spatial audio and my love for music.
