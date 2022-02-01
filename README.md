@@ -44,7 +44,9 @@ and enjoy …
 
 ## This Pipeline in a Nutshell
 
-### 1. A Small introduction video to the pipeline.  ```Main Thread```
+### 1. A Small introduction video to the pipeline. 
+
+```Main Thread```
 
 Demo stems and stemsparser.py is included in the stems directory
 
@@ -67,7 +69,9 @@ I quickly Discovered direct ray tracing is not the most suitable solution to spa
 After computing a sound propagation template PropergationShere( … ) will be truncated. This holds information about how each sound source should change with respect to a sphere around the head.
 
 
-### 3. Spherical Head Related Transfer function. ```Thread 2```
+### 3. Spherical Head Related Transfer function. 
+
+```Thread 2```
 
 Because the source sound differs from ear angles, the propagation sphere has to be attenuated with respect to the HRTF sphere.
 
@@ -78,19 +82,25 @@ SpatialDescriptor( … ) = PropergationShere( … ) - HRTFSphere( … )
 A Personalized Head Related Transfer function is very important for realistic spatial audio. Make sure you run the headcallibration.py file to get everything set up. Read more in the headcalibration folder
 
 
-### 4. Realtime Audio Player ```Thread 3```
+### 4. Realtime Audio Player 
+
+```Thread 3```
 
 This is one of the most crucial parts of this pipeline. It has to be fast, Robust to lags, It has to have almost zero latency, Thus it is the fastest thread.
 
 
-### 5. Real Time Face Tracker  ```Thread 4```
+### 5. Real Time Face Tracker  
+
+```Thread 4```
 
 For a truly immersive experience. FreeDimentionalAudio Requires known facial intrinsic and extrinsic parameters computed in real time. The easiest and least expensive method I could think of was a face tracker. To realize such idea, I took advantage of MediaPipe Face tracker which is crucial to this pipeline
 	
 Make sure to ```pip install mediapipe```
 
 
-### Realtime - Visualizer  ```Main Thread```
+### Realtime - Visualizer  
+
+```Main Thread```
 
 I also built a small visualizer to display how sound and your face moves in real time
 
