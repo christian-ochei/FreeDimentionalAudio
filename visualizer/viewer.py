@@ -1,8 +1,8 @@
 from OpenGL.GLU import *
 from OpenGL.GL import *
-import window
 import glfw
-import controls
+from visualizer import window
+from visualizer import controls
 
 flashLightPos = [ 0.0, 0.0, 0.0]
 flashLightDir = [ 0.0, 0.0, -1.0 ]

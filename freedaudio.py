@@ -1,10 +1,9 @@
 import threading
 import time
-import viewer
-import facetracking
-import headextrinsic
-import stage
-import spatial
+from visualizer import viewer
+from head import headextrinsic, facetracking
+from propagation import spatial, stage
+
 
 class FreeDimensionalAudio:
     """

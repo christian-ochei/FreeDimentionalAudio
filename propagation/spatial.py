@@ -1,6 +1,5 @@
-import soundsource
+from playback import soundsource
 import propagation
-import densepropagation
 import spatialparameters
 import playback
 
@@ -12,7 +11,7 @@ class _SpatialPipeline:
         )
         self._rays_per_speaker = rays_per_speaker
         self._stemsdir = stemsdir
-        self._propergator = propagation._AudioPropagation(room=room,rays_per_speaker=rays_per_speaker)
+        self._propergator = propagation._AudioPropagation(room=room, rays_per_speaker=rays_per_speaker)
         self._3d_sounds   = [soundsource._3DSpatialSpeaker()]
         self._active = True
         self._head_extrinsic = head_extrinsic

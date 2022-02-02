@@ -1,7 +1,5 @@
 import random
-import time
 
-import keyboard
 import numpy as np
 from OpenGL.GL import *
 
@@ -141,16 +139,16 @@ class _AudioPropagation:
         """
         self._first_order_ray._locations[:] = soundsource.location
         _reflection_orders = []
-        _L_ear_orders = [densepropagation._CastedRay(self._first_order_ray[:1],ear_extrinsic._L_ear_pose)]
-        _R_ear_orders = [densepropagation._CastedRay(self._first_order_ray[:1],ear_extrinsic._R_ear_pose)]
+        _L_ear_orders = [densepropagation._CastedRay(self._first_order_ray[:1], ear_extrinsic._L_ear_pose)]
+        _R_ear_orders = [densepropagation._CastedRay(self._first_order_ray[:1], ear_extrinsic._R_ear_pose)]
         _propagation_orders = [self._first_order_ray]
 
         for _ in range(self._reflection_depth):
             rays:_PropagatedRays = self._trace(_propagation_orders[-1])
             rays._distances[:] += _propagation_orders[-1]._distances
             _propagation_orders.append(rays)
-            _L_ear_orders.append(densepropagation._CastedRay(rays,ear_extrinsic._L_ear_pose))
-            _R_ear_orders.append(densepropagation._CastedRay(rays,ear_extrinsic._R_ear_pose))
+            _L_ear_orders.append(densepropagation._CastedRay(rays, ear_extrinsic._L_ear_pose))
+            _R_ear_orders.append(densepropagation._CastedRay(rays, ear_extrinsic._R_ear_pose))
         self._propagation_orders = _propagation_orders
 
         # TODO: DEBUG
@@ -159,7 +157,7 @@ class _AudioPropagation:
             self._ffinal_intersections = []
             self._rays_ = []
 
-        return densepropagation._DensePropagation(_propagation_orders,_L_ear_orders,_R_ear_orders,
+        return densepropagation._DensePropagation(_propagation_orders, _L_ear_orders, _R_ear_orders,
                                                   rays_per_speaker=self._rays_per_speaker)
 
     def _glDraw(self,sound_source,binder):
