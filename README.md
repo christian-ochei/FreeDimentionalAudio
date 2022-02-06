@@ -2,6 +2,8 @@
 
 # FreeDimentionalAudio
 
+
+
  I present FreeDimentionalAudio A framework that enables novel 3D binaural audio synthesis. This work showcases my new RayTracing approach to spatial audio and my love for music.
 
 #
@@ -107,29 +109,9 @@ I also built a small visualizer to display how sound and your face moves in real
 #
 <br>
 
-### Copyright
-
-Although you are allowed to download and run code from this repository. You are not allowed in any way to redistribute it, copy code, images or any audio file that you have gotten from this repository.
-
-For simplification, any copy of audio or text in this repository can only be held. In this repository and/or your computer and no other place on the internet except for fair use
-
-Please understand the reason for such a strict … license .. 
-
-
-As for sharing, You are totally allowed to release videos, media posts and render your songs on this Framework as long as you credit me and this repository.
-
-This copyright law will be amended later in the future.
-#
-<br>
-
 ### Contributing to FreeDimentionalAudio
 
-I am highly in need of contributors please follow this link if you want to contribute
+I am highly in need of contributors. please send a PR.
 …
 #
 <br>
-
-
-### License
-
-… … Licence
