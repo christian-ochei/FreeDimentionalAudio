@@ -68,7 +68,7 @@ entrance_downsweepCrashes.wav
 
 I quickly Discovered direct ray tracing is not the most suitable solution to spatial audio propagation. This is due to rays not being able to account for directional waves and acoustic impedance. Instead of casting rays as lines. I decided to cast triangulated planes from which local sound intensity and total attenuation can be determined by a cubic interpolation of nearest areas. Read my paper for more information.
 
-After computing a sound propagation template PropergationShere( … ) will be truncated. This holds information about how each sound source should change with respect to a sphere around the head.
+After computing a sound propagation template PropagationShere( … ) will be truncated. This holds information about how each sound source should change with respect to a sphere around the head.
 
 
 ### 3. Spherical Head Related Transfer function. 
@@ -78,7 +78,7 @@ After computing a sound propagation template PropergationShere( … ) will be tr
 Because the source sound differs from ear angles, the propagation sphere has to be attenuated with respect to the HRTF sphere.
 
 ```python
-SpatialDescriptor( … ) = PropergationShere( … ) - HRTFSphere( … )
+SpatialDescriptor( … ) = PropagationShere( … ) - HRTFSphere( … )
 ```
 
 A Personalized Head Related Transfer function is very important for realistic spatial audio. Make sure you run the headcallibration.py file to get everything set up. Read more in the headcalibration folder
